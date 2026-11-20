@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101714">
+  <meta name="description" content="Aurevia — твоё личное музыкальное пространство. Находи музыку, собирай библиотеку и открывай новые звучания.">
+  <title>Aurevia — музыка. Без границ.</title>
+  <script>(function(){var p='auto';try{p=localStorage.getItem('aurevia-mood')||'auto'}catch(e){}var h=(new Date().getUTCHours()+3)%24;var m=(p==='dawn'||p==='day'||p==='night')?p:(h>=6&&h<8?'dawn':(h>=8&&h<22?'day':'night'));document.documentElement.setAttribute('data-mood',m)})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+</head>
+<body class="loading">
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader-orbit"><i></i><i></i><i></i><div class="loader-mark"><b></b><b></b><b></b></div></div><span>AUREVIA</span></div>
+  <div class="progress-bar" id="scrollBar"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="Aurevia — на главную">
+        <span class="brand-mark"><i></i><i></i><i></i></span>
+        <span>AUREVIA</span>
+      </a>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Открыть меню"><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Возможности</a>
+        <a href="#principles">Принципы</a>
+        <a href="#echo">Моё эхо</a>
+        <a href="#roadmap">Разработка</a>
+        <a href="#download">Установка</a>
+      </div>
+      <div class="nav-actions">
+        <button class="mood-chip" id="moodChip" aria-label="Настроение сайта"><span class="mood-dot"></span><span class="mood-label" id="moodLabel">Авто</span></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему"><span class="sun">☼</span></button>
+        <a class="nav-cta" href="#download">Попробовать <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <canvas class="orbit-canvas" id="orbitCanvas" aria-hidden="true"></canvas>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> ТВОЁ НОВОЕ МУЗЫКАЛЬНОЕ ПРОСТРАНСТВО</div>
+        <h1>Музыка.<br><span>Без границ.</span></h1>
+        <p class="hero-description">Открой для себя музыку заново. Находи любимое, сохраняй моменты и создавай собственную музыкальную атмосферу.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#download">Узнать об установке <span>↗</span></a>
+          <a class="button button-ghost" href="#features"><span class="play-small">▶</span> Исследовать</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">♫</span><span>Создано для тех, кто живёт музыкой</span><span class="note-line"></span></div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div>
+        <div class="floating-tag tag-top"><span class="tag-icon">✳</span><span><b>Твоя библиотека</b><small>Всё любимое рядом</small></span></div>
+        <div class="player-window">
+          <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>AUREVIA PLAYER</span><span class="window-menu">•••</span></div>
+          <div class="player-layout">
+            <aside class="mock-sidebar">
+              <div class="mock-logo"><span class="mini-mark">A</span> aurevia</div>
+              <div class="mock-nav active"><span>⌂</span> Главная</div>
+              <div class="mock-nav"><span>⌕</span> Поиск</div>
+              <div class="mock-nav"><span>♡</span> Моя музыка</div>
+              <div class="mock-label">ТВОЯ КОЛЛЕКЦИЯ</div>
+              <div class="mock-nav"><span>▤</span> Плейлисты</div>
+              <div class="mock-nav"><span>◉</span> Исполнители</div>
+              <div class="sidebar-bottom"><span class="tiny-avatar">A</span><span>Моё пространство</span></div>
+            </aside>
+            <div class="mock-content">
+              <div class="mock-greeting"><em data-m="greet">Твоё пространство</em><span data-m="sub">Добро пожаловать в Aurevia</span></div>
+              <div class="mock-feature-card">
+                <div><small data-m="kicker">ПОДБОРКА ДЛЯ ТЕБЯ</small><h3 data-m="title">Почувствуй<br>этот момент.</h3><p data-m="desc">Музыка под твоё настроение.</p><button class="mock-play">▶</button></div>
+                <div class="mock-art"><div class="art-sun"></div><div class="art-hill hill-one"></div><div class="art-hill hill-two"></div></div>
+              </div>
+              <div class="mock-section-title">Возможно, тебе понравится <span>Смотреть всё ↗</span></div>
+              <div class="mock-albums">
+                <div class="album"><div class="album-art art-one"><b>01</b></div><strong data-m="a1t">Night drive</strong><small data-m="a1s">Вечерний вайб</small></div>
+                <div class="album"><div class="album-art art-two"><b>02</b></div><strong data-m="a2t">Quiet moments</strong><small data-m="a2s">Спокойствие</small></div>
+                <div class="album"><div class="album-art art-three"><b>03</b></div><strong data-m="a3t">New energy</strong><small data-m="a3s">Новые открытия</small></div>
+              </div>
+              <div class="mock-playerbar">
+                <div class="mini-track"><div class="mini-cover"></div><span><b>Название трека</b><small>Исполнитель</small></span><span class="heart">♡</span></div>
+                <div class="controls"><div>⇄　◂　<span class="big-play">▶</span>　▸　↻</div><div class="progress"><i></i></div></div>
+                <div class="volume">♫　━━━━</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-tag tag-bottom"><span class="equalizer"><i></i><i></i><i></i><i></i><i></i></span><span><b>Звучание момента</b><small>Твоя музыка — твои правила</small></span></div>
+      </div>
+      <a class="scroll-hint" href="#features"><span></span> ЛИСТАЙ НИЖЕ</a>
+    </section>
+
+    <section class="ticker" aria-label="Aurevia">
+      <div class="ticker-track"><div class="ticker-group"><span>FIND YOUR SOUND</span><b>✳</b><span>FEEL THE MOMENT</span><b>✳</b><span>MAKE IT YOURS</span><b>✳</b><span>FIND YOUR SOUND</span><b>✳</b><span>FEEL THE MOMENT</span><b>✳</b></div><div class="ticker-group" aria-hidden="true"><span>FIND YOUR SOUND</span><b>✳</b><span>FEEL THE MOMENT</span><b>✳</b><span>MAKE IT YOURS</span><b>✳</b><span>FIND YOUR SOUND</span><b>✳</b><span>FEEL THE MOMENT</span><b>✳</b></div></div>
+    </section>
+
+    <section class="manifesto container" aria-label="Манифест"><p class="manifesto-text" id="manifesto">Музыка — это не просто список треков. Это настроение, воспоминания и моменты, которые хочется сохранить. Aurevia собирает их в одном месте — твоём.</p></section>
+
+    <section class="section container" id="features">
+      <div class="section-heading reveal"><div><div class="eyebrow">БОЛЬШЕ, ЧЕМ ПЛЕЕР</div><h2>Музыка должна<br>быть <span>твоей.</span></h2></div><p>Всё необходимое для музыкального опыта — в одном месте. Без лишнего, с вниманием к деталям.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large reveal"><div class="feature-icon">⌕</div><div class="feature-card-copy"><span class="feature-number">01 / DISCOVER</span><h3>Находи своё</h3><p>Ищи композиции и открывай исполнителей. Новая музыка может оказаться ближе, чем кажется.</p></div><div class="search-visual"><div class="search-pill"><span>⌕</span> <em class="typed" id="typed">Найти что-то новое</em><kbd>↵</kbd></div><div class="search-result"><div class="result-cover cover-a"></div><span><b>Новая находка</b><small>Исполнитель · Трек</small></span><span class="result-time">3:42</span></div><div class="search-result"><div class="result-cover cover-b"></div><span><b>В другом настроении</b><small>Исполнитель · Трек</small></span><span class="result-time">4:08</span></div></div></article>
+        <article class="feature-card reveal"><div class="feature-icon">♡</div><span class="feature-number">02 / COLLECTION</span><h3>Собирай любимое</h3><p>Сохраняй то, что откликается. Твоя библиотека — отражение твоего вкуса.</p><div class="heart-visual"><span>♡</span><i>♡</i><b>ТВОЯ КОЛЛЕКЦИЯ</b></div></article>
+        <article class="feature-card reveal"><div class="feature-icon">◌</div><span class="feature-number">03 / YOUR SPACE</span><h3>Оставайся собой</h3><p>Персональное пространство, в котором музыка ощущается по-настоящему твоей.</p><div class="space-visual"><div class="space-ring"></div><div class="space-core">A</div><span>MY SPACE</span></div></article>
+      </div>
+    </section>
+
+
+    <section class="section container" id="principles">
+      <div class="section-heading reveal"><div><div class="eyebrow">ПРИНЦИПЫ</div><h2>Без шума.<br><span>Только музыка.</span></h2></div><p>На чём строится Aurevia: честный плеер без рекламы, который работает и с интернетом, и с твоими файлами.</p></div>
+      <div class="principles">
+        <article class="principle reveal"><div class="p-big">0</div><h3>рекламы</h3><p>Никаких рекламных вставок между треками.</p></article>
+        <article class="principle reveal"><div class="p-big p-word">Win</div><h3>Windows first</h3><p>Сначала — полноценная версия для Windows.</p></article>
+        <article class="principle reveal"><div class="p-big p-word">Web<i>+</i>PC</div><h3>Online + Local</h3><p>Онлайн-поиск и воспроизведение локальной музыки.</p></article>
+        <article class="principle reveal"><div class="p-big">1</div><h3>единый плеер</h3><p>Управление музыкой из любого раздела.</p></article>
+      </div>
+      <div class="chips-block reveal">
+        <div class="chips-title">ЧТО УМЕЕТ</div>
+        <div class="chip-rows"><div class="chip-row"><div class="chip-group"><span>Поиск через Audius</span><span>Очередь воспроизведения</span><span>Следующий и предыдущий трек</span><span>Перемешивание и повтор</span><span>Громкость и отключение звука</span></div></div>
+        <div class="chip-row reverse"><div class="chip-group"><span>Перемотка и прогресс</span><span>Сохранение позиции трека</span><span>Избранное и библиотека</span><span>Плейлисты, альбомы, исполнители</span><span>Профиль пользователя</span></div></div></div>
+      </div>
+      <div class="under-hood">
+        <article class="hood-card reveal"><div class="layers"><i></i><i></i><i></i></div><div><span class="feature-number">ПОД КАПОТОМ</span><h3>Clean Architecture</h3><p>Приложение разделено на независимые слои — проще развивать и тестировать.</p></div></article>
+        <article class="hood-card reveal"><div class="layers mvvm"><i></i><i></i><i></i></div><div><span class="feature-number">ИНТЕРФЕЙС</span><h3>MVVM</h3><p>Удобная и поддерживаемая архитектура интерфейса.</p></div></article>
+      </div>
+    </section>
+
+    <section class="echo-section" id="echo">
+      <div class="wave" id="wave" aria-hidden="true"></div>
+      <div class="container echo-wrap">
+        <div class="echo-copy reveal"><div class="eyebrow"><span class="pulse-dot"></span> ТВОЯ ЛИЧНАЯ СТОРОНА МУЗЫКИ</div><h2>Моё <span>эхо.</span></h2><p>Не просто список треков. Это место, где собирается твоя музыкальная история — любимые композиции, открытия и настроения.</p><a class="text-link" href="#roadmap">Узнать, что мы готовим <span>↗</span></a></div>
+        <div class="echo-art reveal"><div class="echo-backdrop"></div><div class="echo-disc"><div class="disc-label">AUREVIA<br><small>YOUR ECHO</small></div></div><div class="echo-card echo-card-one"><span>♡</span><b>Избранное</b><small>Треки, к которым возвращаешься</small></div><div class="echo-card echo-card-two"><span>♫</span><b>Твоя история</b><small>Музыка твоих моментов</small></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="roadmap">
+      <div class="section-heading reveal"><div><div class="eyebrow">ПУТЬ AUREVIA</div><h2>Создаём. Улучшаем.<br><span>Слушаем.</span></h2></div><p>Aurevia развивается постепенно. Вот над чем мы работаем и что хотим добавить в будущих версиях.</p></div>
+      <div class="roadmap">
+        <div class="roadmap-item reveal"><div class="roadmap-marker active-marker"></div><div class="roadmap-meta">СЕЙЧАС · ОСНОВА ПРОЕКТА</div><h3>Формируем музыкальное пространство</h3><p>Собираем ядро: поиск через Audius, единый плеер с очередью, избранное, библиотека, плейлисты и профиль.</p><span class="status status-progress">В разработке</span></div>
+        <div class="roadmap-item reveal"><div class="roadmap-marker"></div><div class="roadmap-meta">СЛЕДУЮЩИЙ ЭТАП</div><h3>Собственная серверная часть</h3><p>ASP.NET Core API, PostgreSQL для хранения данных и EF Core для работы с базой.</p><span class="status">В планах</span></div>
+        <div class="roadmap-item reveal"><div class="roadmap-marker"></div><div class="roadmap-meta">БУДУЩИЕ ВОЗМОЖНОСТИ</div><h3>Аккаунты и синхронизация</h3><p>Синхронизация пользовательской библиотеки, авторизация и персональные настройки.</p><span class="status">В планах</span></div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="container download-inner reveal">
+        <div class="download-glow"></div>
+        <div class="eyebrow"><span class="pulse-dot"></span> СКОРО НА ТВОЁМ УСТРОЙСТВЕ</div>
+        <h2>Твоё новое звучание<br><span>уже близко.</span></h2>
+        <p>Мы готовим Aurevia к первому релизу. Совсем скоро здесь появится возможность установить приложение.</p>
+        <div class="platform-select">
+          <button class="platform-button selected" data-platform="Windows"><span class="platform-symbol">⊞</span><span><b>Windows</b><small>Версия готовится</small></span><span class="platform-check">✓</span></button>
+          <button class="platform-button" data-platform="macOS"><span class="platform-symbol">⌘</span><span><b>macOS</b><small>В планах</small></span><span class="platform-check">✓</span></button>
+          <button class="platform-button" data-platform="Linux"><span class="platform-symbol">◈</span><span><b>Linux</b><small>В планах</small></span><span class="platform-check">✓</span></button>
+        </div>
+        <button class="button button-primary download-button" id="downloadButton">Скоро будет доступно <span>↗</span></button>
+        <div class="download-caption" id="downloadCaption">Выбрана платформа Windows · Установщик пока не опубликован</div>
+      </div>
+    </section>
+
+    <section class="section container faq-section" id="faq">
+      <div class="section-heading reveal"><div><div class="eyebrow">ЕСТЬ ВОПРОСЫ?</div><h2>Всё по <span>полочкам.</span></h2></div><p>Коротко отвечаем на самые важные вопросы о проекте.</p></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Что такое Aurevia?<span>＋</span></summary><p>Aurevia — музыкальное desktop-приложение, которое объединяет поиск музыки и личную музыкальную библиотеку в одном пространстве.</p></details>
+        <details class="faq-item"><summary>Когда можно будет установить приложение?<span>＋</span></summary><p>Приложение находится в разработке. Когда появится первая доступная сборка, здесь будет опубликована ссылка на установщик.</p></details>
+        <details class="faq-item"><summary>Будет ли Aurevia бесплатной?<span>＋</span></summary><p>Модель распространения и возможные тарифы пока не объявлены. Следите за обновлениями проекта.</p></details>
+        <details class="faq-item"><summary>Какие платформы планируются?<span>＋</span></summary><p>В первую очередь мы ориентируемся на Windows. Поддержка других платформ будет рассматриваться отдельно.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main"><a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span>AUREVIA</span></a><p>Музыка. Без границ.</p><div class="footer-links"><a href="#features">Возможности</a><a href="#principles">Принципы</a><a href="#roadmap">Разработка</a><a href="#download">Установка</a><a href="#faq">Вопросы</a></div></div>
+    <div class="footer-word" aria-hidden="true">AUREVIA</div>
+    <div class="container footer-bottom"><span>© 2026 Aurevia. Создаётся с любовью к музыке.</span><a href="#top">Наверх ↑</a></div>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+  <script src="orbit.js"></script>
+  <script src="extras.js"></script>
+  <script src="mood.js"></script>
+</body>
+</html>
